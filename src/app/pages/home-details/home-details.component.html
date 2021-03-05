@@ -1,0 +1,48 @@
+
+    <div class="container" >
+        <h3>Detalle de la solicitud</h3>
+        <hr>
+        <div class="row">
+            <div class="col-6">
+                <h5>informacion de la licencia</h5>
+                <hr>
+    
+                <p > Id : {{datalicensesObserver.page?.id}}</p>
+           
+                <p> tipo de Licencia : {{datalicensesObserver.page?.typeLicense.description}} </p>
+        
+                <p>Fecha de Creación : {{datalicensesObserver.page?.initDate}}</p>
+        
+                <p>diagnostico: {{datalicensesObserver.page?.medicDiagnostic.description}}</p>
+        
+                <p>Fecha de Centificado: {{datalicensesObserver.page?.medicalCertificateDate | date:'dd/MM/YYYY'}}</p>
+        
+                <p>Inicio de Ausentismo: {{datalicensesObserver.page?.initDate | date:'dd/MM/YYYY'}}</p>
+        
+                <p>Dias de Certificado: {{datalicensesObserver.page?.days}}</p>
+        
+               
+            </div>
+         
+            <div class="col-md-6">
+                <h5>Informacion Personal</h5>
+                <hr>
+                <p>Nombre: {{datalicensesObserver.page?.user.name}}</p>
+                
+                <p>Apellido: {{datalicensesObserver.page?.user.surname}}</p>
+
+                <p>Cuil: {{datalicensesObserver.page?.user.cuil}}</p>
+     
+                <p>Documento: {{datalicensesObserver.page?.user.businessId}}</p>
+
+              
+            </div>
+        </div>
+       
+    
+
+       
+        
+    
+    </div>
+    
