@@ -13,6 +13,8 @@ export class HomeComponent implements OnInit {
   public columns: any[] = [];
   public loading: boolean = false;
   public dataChange: Observable<any> | undefined;
+  public currentTab: any = 'MEDIC';
+  public tabs: any[] = [];
 
   constructor(private licensesServices: LicensesService) { }
 
@@ -22,6 +24,10 @@ export class HomeComponent implements OnInit {
     this.buildDataTable();
 
     this.licensesServices.getLicensesMap().subscribe( dataResp => dataResp)
+
+    this.tabs = [
+			{ title: 'Médicos', linkTo: 'prueba' }
+		];
   }
 
   setDataColumns(){

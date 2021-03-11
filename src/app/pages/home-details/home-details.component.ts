@@ -15,7 +15,8 @@ export class HomeDetailsComponent implements OnInit {
   ngOnInit( ): void {
     this.licensesServices.getDataLicenses().subscribe((data:any) => {
   
-      this.datalicensesObserver = data
+      this.datalicensesObserver = data;
+      console.log(this.licensesData)
 
     })
   }

@@ -31,9 +31,12 @@ export class ReusableToolbarComponent implements OnInit {
 	) { }
 
 	ngOnInit() {
+		console.log(this.tabs)
 	}
 
 	goTo(data: any) {
+		console.log(data.linkTo)
+		
 		return (data.tab) ? this.returnTabSelected.emit(data.tab) : this.router.navigate([data.linkTo]);
 	}
 

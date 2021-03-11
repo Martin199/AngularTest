@@ -1,3 +1,5 @@
+import { ReusableStateComponent } from './shared/reusable/reusable-state/reusable-state.component';
+import { ReusableToolbarComponent } from './shared/reusable/toolbar/reusable-toolbar.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
@@ -11,7 +13,10 @@ const routes: Routes = [
   {
     path:"home/:id",
     component: HomeDetailsComponent
-  },
+  },{
+    path:"prueba",
+    component: ReusableStateComponent
+   },
   {
     path: "**",
     redirectTo: "home"

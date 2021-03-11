@@ -1,14 +1,12 @@
 <div class="container mt-2">
-    <p>Licenses List</p>
 
-    <reusable-table  [columns]="columns" [data]="data" ></reusable-table>
-    
-    
-    
-    <div class="d-flex justify-content-center mb-2" *ngIf="data.length === 0" >
-        <div class="spinner-border" role="status" >
+    <reusable-toolbar [tabs]="tabs" [currentTab]="currentTab" [linkTo]="'prueba'" [section]="'Listado de Licensias'" [title]="'Subtitulo'"></reusable-toolbar>
+
+    <reusable-table [columns]="columns" [data]="data"></reusable-table>
+
+    <div class="d-flex justify-content-center mb-2" *ngIf="data.length === 0">
+        <div class="spinner-border" role="status">
             <span class="sr-only">Loading...</span>
         </div>
     </div>
 </div>
-
